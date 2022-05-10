@@ -18,6 +18,10 @@ inputs:
     required: false
     description: Whether to comment on the PR
     default: false
+  should_wait_for_build:
+    required: false
+    description: Whether to wait for the build to finish the github action
+    default: true
   heroku_api_token:
     required: true
     description: Heroku API token
