@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Heroku Review Application
-        uses: matmar10/pr-heroku-review-app@master
+        uses: NansD/heroku-deploy-review-app@v0.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           github_label: Review App
