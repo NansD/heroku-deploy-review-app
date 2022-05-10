@@ -11,7 +11,7 @@
     "lint": "eslint src/**/*.ts",
     "package": "ncc build --source-map --license licenses.txt",
     "test": "jest",
-    "all": "npm run build && npm run format && npm run lint && npm run package && npm test",
+    "all": "npm run build && npm run format && npm run lint && npm run package",
     "publish-to-branch": "npm run build && npm run package && git add dist && git commit -a -m \"prod dependencies\" && git push origin releases/v1"
   },
   "repository": {
