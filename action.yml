@@ -1,11 +1,30 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: Heroku Deploy Review App
+
+description: Create and update a Heroku review app when a PR is raised by someone with write or admin access
+
+branding:
+  icon: monitor
+  color: green
+
 inputs:
-  milliseconds: # change this
+  github_token:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: Github access token
+  github_label:
+    required: false
+    description: Label to apply to PRs (or trigger builds when added to PR)
+    default: ''
+  should_comment_pull_request:
+    required: false
+    description: Whether to comment on the PR
+    default: false
+  heroku_api_token:
+    required: true
+    description: Heroku API token
+  heroku_pipeline_id:
+    required: true
+    description: The UUID of your herkou pipeline to create review app within
+
 runs:
-  using: 'node16'
-  main: 'dist/index.js'
+  using: node16
+  main: dist/index.js

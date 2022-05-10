@@ -1,6 +1,6 @@
 {
-  "name": "typescript-action",
-  "version": "0.0.0",
+  "name": "heroku-deploy-review-app",
+  "version": "0.1.0",
   "private": true,
   "description": "TypeScript template action",
   "main": "lib/main.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git@github.com:NansD/heroku-deploy-review-app.git"
   },
   "keywords": [
     "actions",
@@ -25,9 +25,13 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.6.0"
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.1",
+    "actions-toolkit": "^4.0.0",
+    "heroku-client": "^3.1.0"
   },
   "devDependencies": {
+    "@types/heroku-client": "^3.1.0",
     "@types/node": "^16.10.5",
     "@typescript-eslint/parser": "^5.8.1",
     "@vercel/ncc": "^0.31.1",
